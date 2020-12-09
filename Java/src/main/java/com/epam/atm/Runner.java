@@ -1,10 +1,9 @@
-import models.MilitaryPlaneType;
-import planes.MilitaryPlane;
-import planes.PassengerPlane;
-import planes.Plane;
+package com.epam.atm;
 
-import java.util.Arrays;
-import java.util.List;
+import com.epam.atm.classification.models.*;
+import com.epam.atm.classification.planes.*;
+import java.util.*;
+
 
 public class Runner {
     static List<Plane> planes = Arrays.asList(

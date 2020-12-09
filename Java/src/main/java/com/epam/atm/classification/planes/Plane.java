@@ -1,6 +1,5 @@
-package planes;
-
-import java.util.Objects;
+package com.epam.atm.classification.planes;
+import java.util.*;
 
 abstract public class Plane {
     private String planeModel;

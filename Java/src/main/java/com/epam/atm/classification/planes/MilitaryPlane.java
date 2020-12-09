@@ -1,7 +1,6 @@
-package planes;
-
-import models.MilitaryPlaneType;
-import java.util.Objects;
+package com.epam.atm.classification.planes;
+import com.epam.atm.classification.models.*;
+import java.util.*;
 
 public class MilitaryPlane extends Plane {
 

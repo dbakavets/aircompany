@@ -1,7 +1,6 @@
-package planes;
+package com.epam.atm.classification.planes;
+import com.epam.atm.classification.models.*;
 
-import models.ClassificationPlaneLevel;
-import models.ExperimentalPlaneType;
 
 public class ExperimentalPlane extends Plane {
 

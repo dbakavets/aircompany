@@ -1,19 +1,16 @@
-import models.MilitaryPlaneType;
-import planes.ExperimentalPlane;
-import planes.MilitaryPlane;
-import planes.PassengerPlane;
-import planes.Plane;
+package com.epam.atm;
 
+import com.epam.atm.classification.models.*;
+import com.epam.atm.classification.planes.*;
 import java.util.*;
 
 public class Airport {
     private List<? extends Plane> planesList;
 
-
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> airportPlanes = this.planesList;
+        List<? extends Plane> airportPlanesList = this.planesList;
         List<PassengerPlane> passengerPlanesList = new ArrayList<>();
-        for (Plane passengerPlane : airportPlanes) {
+        for (Plane passengerPlane : airportPlanesList) {
             if (passengerPlane instanceof PassengerPlane) {
                 passengerPlanesList.add((PassengerPlane) passengerPlane);
             }
@@ -79,8 +76,8 @@ public class Airport {
 
     public Airport sortByMaxDistance() {
         Collections.sort(planesList, new Comparator<Plane>() {
-            public int compare(Plane a, Plane b) {
-                return a.getPlaneMaxFlightDistance() - b.getPlaneMaxFlightDistance();
+            public int compare(Plane maxPlaneDistance1, Plane maxPlaneDistance2) {
+                return maxPlaneDistance1.getPlaneMaxFlightDistance() - maxPlaneDistance2.getPlaneMaxFlightDistance();
             }
         });
         return this;
@@ -89,8 +86,8 @@ public class Airport {
 
     public Airport sortByMaxSpeed() {
         Collections.sort(planesList, new Comparator<Plane>() {
-            public int compare(Plane a, Plane b) {
-                return a.getPlaneMaxSpeed() - b.getPlaneMaxSpeed();
+            public int compare(Plane maxPlaneSpeed1, Plane maxPlaneSpeed2) {
+                return maxPlaneSpeed1.getPlaneMaxSpeed() - maxPlaneSpeed2.getPlaneMaxSpeed();
             }
         });
         return this;
@@ -98,8 +95,8 @@ public class Airport {
 
     public Airport sortByMaxLoadCapacity() {
         Collections.sort(planesList, new Comparator<Plane>() {
-            public int compare(Plane a, Plane b) {
-                return a.getPlaneMaxLoadCapacity() - b.getPlaneMaxLoadCapacity();
+            public int compare(Plane maxPlaneCapacity1, Plane maxPlaneCapacity2) {
+                return maxPlaneCapacity1.getPlaneMaxLoadCapacity() - maxPlaneCapacity2.getPlaneMaxLoadCapacity();
             }
         });
         return this;
@@ -119,7 +116,7 @@ public class Airport {
 
     @Override
     public String toString() {
-        return "Airport{" +
+        return "epam.Airport{" +
                 "Planes=" + planesList.toString() +
                 '}';
     }
