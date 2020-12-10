@@ -3,7 +3,7 @@ import java.util.*;
 
 public class PassengerPlane extends Plane {
 
-    private int planePassengersCapacity;
+    private final int planePassengersCapacity;
 
     public PassengerPlane(String planeModel, int planeMaxSpeed, int planeMaxFlightDistance, int planeMaxLoadCapacity, int planePassengersCapacity)  {
         super(planeModel, planeMaxSpeed, planeMaxFlightDistance, planeMaxLoadCapacity);

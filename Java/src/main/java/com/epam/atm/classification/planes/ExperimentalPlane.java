@@ -4,8 +4,8 @@ import com.epam.atm.classification.models.*;
 
 public class ExperimentalPlane extends Plane {
 
-    private ExperimentalPlaneType experimentalPlaneType;
-    private ClassificationPlaneLevel classificationPlaneLevel;
+    private final ExperimentalPlaneType experimentalPlaneType;
+    private final ClassificationPlaneLevel classificationPlaneLevel;
 
     public ExperimentalPlane(String planeModel, int planeMaxSpeed, int planeMaxFlightDistance, int planeMaxLoadCapacity, ExperimentalPlaneType experimentalPlaneType, ClassificationPlaneLevel classificationPlaneLevel) {
         super(planeModel, planeMaxSpeed, planeMaxFlightDistance, planeMaxLoadCapacity);

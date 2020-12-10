@@ -2,10 +2,10 @@ package com.epam.atm.classification.planes;
 import java.util.*;
 
 abstract public class Plane {
-    private String planeModel;
-    private int planeMaxSpeed;
-    private int planeMaxFlightDistance;
-    private int planeMaxLoadCapacity;
+    private final String planeModel;
+    private final int planeMaxSpeed;
+    private final int planeMaxFlightDistance;
+    private final int planeMaxLoadCapacity;
 
     public Plane(String planeModel, int planeMaxSpeed, int planeMaxFlightDistance, int planeMaxLoadCapacity) {
         this.planeModel = planeModel;
